@@ -1,0 +1,44 @@
+SOLUTION
+// BankAccount - deposit , withdraw and balance
+#include<iostream>
+using namespace std;
+
+class Bank{
+    double deposit = 0;
+    double Withdraw = 0;
+    double balance = 0;
+
+    public:
+    void deposit_money(double money){
+        deposit = money;
+        cout << "Deposited Money: "<<deposit<<endl;
+    }
+
+    void withdraw_money(double drwan_money){
+        Withdraw = drwan_money;
+        cout << "Withdrwan Money: "<<Withdraw<<endl;
+    }
+
+    void Balance_money(){
+        balance = deposit - Withdraw;
+        cout<<"Your Account Balance: "<<balance<<endl;
+
+    }
+
+};
+int main(){
+    double deposit_m , withdraw_m;
+    cout<<"Enter the amount to Deposit "<<endl;
+    cin >> deposit_m ;
+    cout<< "Enter the amount to withdraw "<<endl;
+    cin >> withdraw_m;
+    Bank Rohit;
+    cout<<"Before Deposit "<<endl;
+    cout<<"----------------"<<endl;
+    Rohit.Balance_money();
+    Rohit.deposit_money(deposit_m);
+    Rohit.withdraw_money(withdraw_m);
+    cout<<"After Withdrawing "<<endl;
+    cout<<"----------------"<<endl;
+    Rohit.Balance_money();
+}
